@@ -6,12 +6,12 @@ from std_msgs.msg import Float64MultiArray
 
 
 
-class cartPublisher(Node):
+class gripperPublisher(Node):
 
     def __init__(self):
         super().__init__('my_node')
-        self.pub = self.create_publisher(Float64MultiArray, '/effort_controllers/commands', 10)
-        timer_period = 3  # seconds
+        self.pub = self.create_publisher(Float64MultiArray, '/gripper_controller/commands', 10)
+        timer_period = 5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 30.0
 
@@ -26,7 +26,7 @@ class cartPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    my_node = cartPublisher()
+    my_node = gripperPublisher()
 
     rclpy.spin(my_node)
     
