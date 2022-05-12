@@ -49,18 +49,6 @@ ament_target_dependencies( position
   control_msgs
 )
 
-add_executable(velocity src/velocity.cpp)
-ament_target_dependencies( velocity
-  rclcpp
-  std_msgs
-)
-
-add_executable(effort src/effort.cpp)
-ament_target_dependencies( effort
-  rclcpp
-  std_msgs
-)
-
 add_executable(gripper src/gripper.cpp)
 ament_target_dependencies( gripper
   rclcpp
@@ -81,10 +69,7 @@ endif()
 
 # Install C++ Modules
 install(TARGETS 
-  
-  position 
-  velocity 
-  effort 
+    
   gripper
   cpp_node
 
@@ -96,8 +81,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 install(PROGRAMS
 
-  scripts/effort.py
-  scripts/velocity.py
+  scripts/gripper.py
 
   DESTINATION lib/${PROJECT_NAME}
 )
