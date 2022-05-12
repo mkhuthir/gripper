@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package format="2">
 
-  <name>gz_ros2_control</name>
+  <name>gripper</name>
   <version>0.1.0</version>
   
-  <description>gazebo ros2 control</description>
+  <description>gripper</description>
 
   <maintainer email="mkhuthir@gmail.com">Muthanna Alwahash</maintainer>
 

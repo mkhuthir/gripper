@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(gz_ros2_control)
+project(gripper)
 
 # Default to C11
 if(NOT CMAKE_C_STANDARD)
@@ -42,12 +42,6 @@ install(DIRECTORY
 )
 
 # C++ Executables
-add_executable(position src/position.cpp)
-ament_target_dependencies( position
-  rclcpp
-  rclcpp_action
-  control_msgs
-)
 
 add_executable(gripper src/gripper.cpp)
 ament_target_dependencies( gripper
