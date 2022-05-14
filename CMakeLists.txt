@@ -63,10 +63,10 @@ endif()
 
 # Install C++ Modules
 install(TARGETS 
-    
-  gripper
+  
   cpp_node
-
+  gripper
+  
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -75,6 +75,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 install(PROGRAMS
 
+  scripts/py_node.py
   scripts/gripper.py
 
   DESTINATION lib/${PROJECT_NAME}
